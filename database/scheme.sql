@@ -1,18 +1,18 @@
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user` varchar(16) NOT NULL,
+  `username` varchar(16) NOT NULL,
   `name` varchar(255) NOT NULL,
   `password` char(41) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `users_user_uindex` (`user`)
+  UNIQUE KEY `users_user_uindex` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `views` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `view` varchar(255) NOT NULL,
+  `view_name` varchar(255) NOT NULL,
   `rule` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `views_view_uindex` (`view`),
+  UNIQUE KEY `views_view_uindex` (`view_name`),
   UNIQUE KEY `views_rule_uindex` (`rule`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
